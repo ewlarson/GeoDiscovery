@@ -122,6 +122,10 @@ GEM
       devise
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     dry-configurable (1.0.1)
       dry-core (~> 1.0, < 2)
       zeitwerk (~> 2.6)
@@ -267,6 +271,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.5.5)
+    pg (1.4.5)
     popper_js (1.16.1)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -400,10 +405,12 @@ DEPENDENCIES
   debug
   devise
   devise-guests (~> 0.8)
+  dotenv-rails (~> 2.8)
   geoblacklight (~> 4.0)
   importmap-rails
   jbuilder
   jquery-rails
+  pg (~> 1.4)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   redis (~> 4.0)

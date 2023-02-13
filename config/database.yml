@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  pool: 10
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  host: "<%= ENV['GEOBLACKLIGHT_DB_HOST'] %>"
+  database: "<%= ENV['GEOBLACKLIGHT_DB_DATABASE'] %>"
+  username: "<%= ENV['GEOBLACKLIGHT_DB_USER'] %>"
+  password: "<%= ENV['GEOBLACKLIGHT_DB_PASSWORD'] %>"
