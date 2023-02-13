@@ -30,7 +30,7 @@ jobs:
     - name: Install json schema validator
       run: gem install json_schemer
     - name: Run json_schemer against aarkvark fixtures
-      run: find test/fixtures/gbl_documents -type f -name "*.json" | xargs json_schemer schema/geoblacklight-schema-aardvark.json
+      run: find test/fixtures/files/gbl_documents -type f -name "*.json" | xargs json_schemer schema/geoblacklight-schema-aardvark.json
 
   test:
     runs-on: ubuntu-latest
@@ -49,7 +49,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby_version }}
     - name: Create Solr container
-      run: docker run -d -p 8983:8983 geoblacklight/solr:9.1.1-v1.0.0 server/scripts/ci-start.sh
+      run: docker run -d -p 8983:8983 geoblacklight/solr:8.9-v1.0.0 server/scripts/ci-start.sh
     - name: Install bundler
       run: gem install bundler -v ${{ matrix.bundler_version }}
     - name: Install dependencies
