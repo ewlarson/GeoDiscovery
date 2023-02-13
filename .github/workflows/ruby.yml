@@ -52,6 +52,8 @@ jobs:
       run: docker run -d -p 8983:8983 geoblacklight/solr:8.9-v1.0.0 server/scripts/ci-start.sh
     - name: Install bundler
       run: gem install bundler -v ${{ matrix.bundler_version }}
+    - name: Force platform
+      run: bundle config set force_ruby_platform true
     - name: Install dependencies
       run: bundle _${{ matrix.bundler_version }}_ install
       env:
