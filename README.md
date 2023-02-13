@@ -1,5 +1,7 @@
 # GeoDiscovery
-Repo for AGSL GeoDiscovery Application
+![CI](https://github.com/UWM-Libraries/GeoDiscovery/actions/workflows/ruby.yml/badge.svg) 
+
+Repo for AGSL GeoDiscovery Application.
 
 ### Local Development
 
