@@ -91,3 +91,6 @@ gem "devise-guests", "~> 0.8"
 
 # ENV
 gem "dotenv-rails", "~> 2.8"
+
+# Standard
+gem "standardrb"
