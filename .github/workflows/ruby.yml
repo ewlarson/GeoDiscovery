@@ -70,6 +70,7 @@ jobs:
     - name: Run tests
       run: bundle exec rake ci
       env:
+        SOLR_VERSION: 8.9
         RAILS_VERSION: ${{ matrix.rails_version }}
         FARADAY_VERSION: ${{ matrix.faraday_version }}
         ENGINE_CART_RAILS_OPTIONS: '--skip-git --skip-listen --skip-spring --skip-keeps --skip-action-cable --skip-coffee --skip-test'
