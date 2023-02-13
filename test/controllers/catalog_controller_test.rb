@@ -1,8 +1,8 @@
-require 'test_helper'
+require "test_helper"
 
 class CatalogControllerTest < ActionDispatch::IntegrationTest
   test "should render catalog" do
-    get '/catalog'
+    get "/catalog"
     assert_response :success
   end
 end

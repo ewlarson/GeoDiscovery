@@ -12,8 +12,8 @@ class HomepageTest < ApplicationSystemTestCase
 
   def test_homepage_search
     within("form.search-query-form") do
-      fill_in("q", with: 'water')
-      click_button 'Search'
+      fill_in("q", with: "water")
+      click_button "Search"
     end
 
     assert page.has_content?("Search Results")
