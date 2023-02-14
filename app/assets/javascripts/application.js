@@ -8,7 +8,8 @@
 //= require bootstrap
 //= require blacklight/blacklight
 
-
-
 // Required by GeoBlacklight
 //= require geoblacklight
+
+// UWM
+//= require uwm
