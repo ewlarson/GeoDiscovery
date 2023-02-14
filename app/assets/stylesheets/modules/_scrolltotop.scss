@@ -1,0 +1,51 @@
+// Scroll to Top
+#scrolltotop {
+  position: fixed;
+  z-index: 9999999;
+  bottom: 2rem;
+  right: 2rem;
+  visibility: hidden;
+  opacity: 1;
+  transition: visibility 0s linear .3s, opacity .3s;
+}
+
+#scrolltotop.fade-in {
+  visibility: visible;
+  opacity: 1;
+}
+
+#scrolltotop a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+#scrolltotop svg {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%
+}
+
+  #scrolltotop svg path {
+  fill: #fff;
+}
+@media screen and (min-width:900px) {
+  #scrolltotop {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}
+
+#scrolltotop .screen-reader-text {
+  color: #fff;
+}
+
+#scrolltotop .screen-reader-text:focus {
+  color: #404040;
+}
