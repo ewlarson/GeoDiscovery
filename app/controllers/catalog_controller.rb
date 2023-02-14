@@ -94,10 +94,10 @@ class CatalogController < ApplicationController
     # DEFAULT FACETS
     # to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.INDEX_YEAR, label: "Year", limit: 10
-    config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, label: "Place", limit: 8
+    config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, label: "Place", limit: 8, collapse: false
     config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, label: "Access", limit: 8, item_component: Geoblacklight::IconFacetItemComponent
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, label: "Resource Class", limit: 8
-    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, label: "Resource Type", limit: 8
+    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, label: "Resource Type", limit: 8, collapse: false
     config.add_facet_field Settings.FIELDS.FORMAT, label: "Format", limit: 8
     config.add_facet_field Settings.FIELDS.SUBJECT, label: "Subject", limit: 8
     config.add_facet_field Settings.FIELDS.THEME, label: "Theme", limit: 8
