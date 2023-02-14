@@ -295,7 +295,7 @@ class CatalogController < ApplicationController
     config.spell_max = 5
 
     # Nav actions from Blacklight
-    config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
+    # config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
     config.add_nav_action(:search_history, partial: "blacklight/nav/search_history")
 
     # Tools from Blacklight
