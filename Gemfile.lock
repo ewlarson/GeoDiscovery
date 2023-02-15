@@ -122,6 +122,7 @@ GEM
       warden (~> 1.2.3)
     devise-guests (0.8.1)
       devise
+    docile (1.4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.8.1)
@@ -360,6 +361,12 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     solr_wrapper (4.0.2)
       http
       minitar
@@ -445,6 +452,7 @@ DEPENDENCIES
   rsolr (>= 1.0, < 3)
   sassc-rails (~> 2.1)
   selenium-webdriver
+  simplecov
   solr_wrapper (>= 0.3)
   sprockets (< 4.0)
   sprockets-rails
