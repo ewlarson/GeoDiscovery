@@ -1,4 +1,5 @@
 // Local Application Customizations
+@import 'modules/colors';
 
 // Set Header Logo
 $logo-image: image_url('blacklight/logo.svg') !default;
@@ -26,4 +27,9 @@ $cyan:    #0dcaf0 !default;
 $dark:    #212529 !default; // $gray-900
 
 // Example: Bootstrap Link color
-$link-color: #2B74B1;
+$link-color: $uwm-blue-accessible;
+$component-active-bg: $uwm-gold;
+
+$pagination-color: $uwm-text;
+$pagination-border-width: 0;
+$pagination-hover-bg: none;
