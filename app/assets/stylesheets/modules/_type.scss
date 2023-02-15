@@ -2,3 +2,13 @@ body {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   color: $uwm-text;
 }
+
+a {
+  color: $uwm-blue-accessible;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  text-decoration: underline;
+}

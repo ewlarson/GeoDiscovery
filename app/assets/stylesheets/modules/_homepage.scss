@@ -7,3 +7,11 @@
 #main-container [data-map="home"] {
   height: 100%;
 }
+
+#main-container [data-map="home"] .leaflet-control-container .search-control a {
+  color: #212529;
+}
+
+#main-container [data-map="home"] .leaflet-control-container .search-control a:hover {
+  color: $white;
+}
