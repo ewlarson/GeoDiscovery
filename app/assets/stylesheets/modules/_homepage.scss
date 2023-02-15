@@ -8,10 +8,14 @@
   height: 100%;
 }
 
+.search-control {
+  box-shadow: none !important;
+}
+
 #main-container [data-map="home"] .leaflet-control-container .search-control a {
   color: #212529;
 }
 
 #main-container [data-map="home"] .leaflet-control-container .search-control a:hover {
-  color: $white;
+  //color: $white;
 }

@@ -1,0 +1,20 @@
+.facet-field-heading button::after {
+  text-rendering: auto;
+  font: var(--fa-font-solid);
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  line-height: 1;
+  position: absolute;
+  right: 20px;
+  content: "\F146";
+  font-size: 1.5rem;
+  line-height: 1.125;
+  float: right;
+  transform: none !important;
+}
+
+.facet-field-heading button.collapsed::after {
+  transform: none;
+  transition: none;
+  content: "\F0FE";
+}
