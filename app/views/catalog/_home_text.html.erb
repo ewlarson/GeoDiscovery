@@ -30,7 +30,7 @@
         <div class='col-sm col-12 order-4'>
           <div class='card mx-auto'> 
             <h4 class='card-header facet-field-heading'>
-              <%= link_to "Maps + Index Maps", "/?f%5Bdct_isPartOf_sm%5D%5B%5D=Maps + Index Maps" %>
+              <%= link_to "Maps & Index Maps", "/?f%5Bdct_isPartOf_sm%5D%5B%5D=Maps + Index Maps" %>
             </h4>
           </div>
         </div>
@@ -44,6 +44,14 @@
         <div class='col-sm order-2'>
           <h4 class='sr-only'>Resource Type</h4>
           <%= render_facet_partials [Settings.FIELDS.RESOURCE_TYPE] %>
+        </div>
+      </div>
+
+      <div class='row text-left'>
+        <div class='col-md order-1 mb-3'> 
+          <p>
+            <em>AGSL GeoDiscovery</em> 
+            is an online geoportal that provides discovery and access to Wisconsin geospatial data, imagery, and scanned maps. To learn more, check out our <a href="/pages/about">about</a> and <a href="/pages/help">help</a> pages</a>.</p>
         </div>
       </div>
     </div>
