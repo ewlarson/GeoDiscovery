@@ -1,0 +1,6 @@
+<div class='row'>
+  <div id="documents" class="documents-list col-md-6">
+    <%= render documents, :as => :document %>
+  </div>
+  <%= content_tag :div, '', id: 'map', class: 'col-md-6 sticky-top position-sticky', aria: { label: t('geoblacklight.map.label') }, data: { map: results_js_map_selector(controller.controller_name), 'catalog-path'=> search_catalog_path , 'map-bbox' => params[:bbox], basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
+</div>

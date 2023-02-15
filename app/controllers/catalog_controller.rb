@@ -94,10 +94,10 @@ class CatalogController < ApplicationController
     # DEFAULT FACETS
     # to add additional facets, use the keys defined in the settings.yml file
     config.add_facet_field Settings.FIELDS.INDEX_YEAR, label: "Year", limit: 10
-    config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, label: "Place", limit: 8
+    config.add_facet_field Settings.FIELDS.SPATIAL_COVERAGE, label: "Place", limit: 8, collapse: false
     config.add_facet_field Settings.FIELDS.ACCESS_RIGHTS, label: "Access", limit: 8, item_component: Geoblacklight::IconFacetItemComponent
     config.add_facet_field Settings.FIELDS.RESOURCE_CLASS, label: "Resource Class", limit: 8
-    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, label: "Resource Type", limit: 8
+    config.add_facet_field Settings.FIELDS.RESOURCE_TYPE, label: "Resource Type", limit: 8, collapse: false
     config.add_facet_field Settings.FIELDS.FORMAT, label: "Format", limit: 8
     config.add_facet_field Settings.FIELDS.SUBJECT, label: "Subject", limit: 8
     config.add_facet_field Settings.FIELDS.THEME, label: "Theme", limit: 8
@@ -295,13 +295,13 @@ class CatalogController < ApplicationController
     config.spell_max = 5
 
     # Nav actions from Blacklight
-    config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
+    # config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
     config.add_nav_action(:search_history, partial: "blacklight/nav/search_history")
 
     # Tools from Blacklight
     config.add_results_collection_tool(:sort_widget)
     config.add_results_collection_tool(:per_page_widget)
-    config.add_show_tools_partial(:bookmark, partial: "bookmark_control", if: :render_bookmarks_control?)
+    # config.add_show_tools_partial(:bookmark, partial: "bookmark_control", if: :render_bookmarks_control?)
     config.add_show_tools_partial(:citation)
     config.add_show_tools_partial(:email, callback: :email_action, validator: :validate_email_params)
     config.add_show_tools_partial(:sms, if: :render_sms_action?, callback: :sms_action, validator: :validate_sms_params)

@@ -1,0 +1,63 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-lg-5 order-1'>
+      
+      <div class='row text-center mb-4'>
+        <div class='col-sm col-12 order-1'>         
+          <div class='card mx-auto'>
+            <h4 class='card-header facet-field-heading'>
+              <%= link_to "Browse All", "/?search_field=all_fields&q=" %>
+            </h4>
+          </div>
+        </div>
+        <div class='col-sm col-12 order-2'>         
+          <div class='card mx-auto'>
+            <h4 class='card-header facet-field-heading'>
+              <%= link_to "Wisconsin", "?f%5Bdct_isPartOf_sm%5D%5B%5D=Wisconsin&q=&search_field=all_fields" %>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class='row text-center mb-4'>
+        <div class='col-sm col-12 order-3'>
+          <div class='card mx-auto'>
+            <h4 class='card-header facet-field-heading'>
+              <%= link_to "AGSL Holdings", "/?f%5Bdct_isPartOf_sm%5D%5B%5D=AGSL Holdings" %>
+            </h4>
+          </div>
+        </div>
+        <div class='col-sm col-12 order-4'>
+          <div class='card mx-auto'> 
+            <h4 class='card-header facet-field-heading'>
+              <%= link_to "Maps & Index Maps", "/?f%5Bdct_isPartOf_sm%5D%5B%5D=Maps + Index Maps" %>
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div class='row mb-4'>
+        <div class='col-sm order-1'>
+          <h4 class='sr-only'>Place</h4>
+          <%= render_facet_partials [Settings.FIELDS.SPATIAL_COVERAGE], {class:'active'} %>
+        </div>
+        <div class='col-sm order-2'>
+          <h4 class='sr-only'>Resource Type</h4>
+          <%= render_facet_partials [Settings.FIELDS.RESOURCE_TYPE] %>
+        </div>
+      </div>
+
+      <div class='row text-left'>
+        <div class='col-md order-1 mb-3'> 
+          <p>
+            <em>AGSL GeoDiscovery</em> 
+            is an online geoportal that provides discovery and access to Wisconsin geospatial data, imagery, and scanned maps. To learn more, check out our <a href="/pages/about">about</a> and <a href="/pages/help">help</a> pages</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrapper-map" class='col-lg-7 order-2'>
+      <%= content_tag :div, '', id: 'map', aria: { label: t('geoblacklight.map.label') }, data: { map: 'home', 'catalog-path'=> search_catalog_path , 'map-geom' => Settings.HOMEPAGE_MAP_GEOM, basemap: geoblacklight_basemap, leaflet_options: leaflet_options } %>
+    </div>
+  </div>
+</div>

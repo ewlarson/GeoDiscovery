@@ -1,0 +1,39 @@
+// Local UWM Modules
+@import 'modules/colors';
+@import 'modules/accordions';
+@import 'modules/cards';
+@import 'modules/footer';
+@import 'modules/homepage';
+@import 'modules/navbar';
+@import 'modules/scrolltotop';
+@import 'modules/type';
+
+// Button primary
+.btn-primary {
+  @include button-variant($uwm-gold, darken($uwm-gold, 7.5%), darken($uwm-gold, 10%), lighten($uwm-gold, 5%), lighten($uwm-gold, 10%), darken($uwm-gold,30%));
+  color: $uwm-text;
+}
+
+.btn-primary:hover {
+  background: #ffd14c;
+  border-color: #ffd14c;
+  text-decoration: none;
+  color: #404040;
+}
+
+.screen-reader-text {
+  @include sr-only;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
+
+.btn {
+  border-radius: 0 !important;
+  font-weight: 600;
+}
+
+.page-link:hover {
+  text-decoration: underline;
+}

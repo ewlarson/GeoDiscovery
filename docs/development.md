@@ -46,3 +46,7 @@ This rake task will run Solr and Puma and populate the application with the test
 To run the project test suite, run this rake task below:
 
 `RAILS_ENV=test bundle exec rake ci`
+
+### Run the Ruby linter
+
+`bundle exec standardrb`

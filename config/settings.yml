@@ -19,8 +19,8 @@ OVERLAP_RATIO_BOOST: '2'
 # Homepage Map Geometry
 # Leave null to default to entire world
 # Add a stringified GeoJSON object to scope initial render (example from UMass)
-HOMEPAGE_MAP_GEOM: null
-# HOMEPAGE_MAP_GEOM: '{"type":"Polygon","coordinates":[[[-73.58,42.93],[-73.58,41.20],[-69.90,41.20],[-69.90,42.93]]]}'
+# HOMEPAGE_MAP_GEOM: null
+HOMEPAGE_MAP_GEOM: '{"type":"Polygon","coordinates":[[[-87.58,43.93],[-87.58,42.20],[-90.90,42.20],[-90.90,43.93]]]}'
 
 # Non-search-field GeoBlacklight application permitted params
 GBL_PARAMS:
@@ -87,7 +87,7 @@ FIELDS:
   :WXS_IDENTIFIER: 'gbl_wxsIdentifier_s'
 
 # Institution deployed at
-INSTITUTION: 'Stanford'
+INSTITUTION: 'University of Wisconsin-Milwaukee'
 
 # Metadata shown in tool panel
 METADATA_SHOWN:

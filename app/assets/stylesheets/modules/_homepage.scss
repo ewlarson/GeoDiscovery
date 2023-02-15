@@ -1,0 +1,21 @@
+// Homepage
+.jumbotron {
+  padding: 1rem 1rem;
+  background-color: $uwm-bg-gray;
+}
+
+#main-container [data-map="home"] {
+  height: 100%;
+}
+
+.search-control {
+  box-shadow: none !important;
+}
+
+#main-container [data-map="home"] .leaflet-control-container .search-control a {
+  color: #212529;
+}
+
+#main-container [data-map="home"] .leaflet-control-container .search-control a:hover {
+  //color: $white;
+}
