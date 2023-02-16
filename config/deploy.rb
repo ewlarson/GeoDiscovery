@@ -34,10 +34,13 @@ set :migration_role, :app
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/blacklight.yml", "config/database.yml", "config/master.key", "config/secrets.yml"
+append :linked_files, "config/blacklight.yml", "config/database.yml", "config/master.key"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/webpacker", "public/system", "vendor", "storage"
+
+# tmp directory is user-specific
+set :tmp_dir, "/home/geoblacklight/tmp/"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
