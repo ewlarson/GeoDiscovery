@@ -22,9 +22,9 @@
     "dct_rights_sm": ["Please see the UWM Libraries statement on Copyright and<br/>                            Digital Collections."],
     "dct_accessRights_s": "Public",
     "dct_format_s": "GeoJSON",
-    "gbl_wxsIdentifier_s": "druid:A66020BF-5600-4E9E-8815-3ABDE0C0B556",
+    "gbl_wxsIdentifier_s": "druid:FDD35238-506A-4CB4-BF56-0592CC70F4D2",
     "dct_references_s": "{\"https://openindexmaps.org\": \"https://raw.githubusercontent.com/OpenIndexMaps/edu.uwm/main/233bA62500a.geojson\"}",
-    "id": "A66020BF-5600-4E9E-8815-3ABDE0C0B556",
+    "id": "FDD35238-506A-4CB4-BF56-0592CC70F4D2",
     "gbl_mdModified_dt": "2023-02-14T20:07:59.6835138Z",
     "gbl_mdVersion_s": "Aardvark",
     "gbl_suppressed_b": false
