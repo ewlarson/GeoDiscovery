@@ -3,11 +3,11 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-set :application, 'geodiscovery'
-set :deploy_user, 'geoblacklight'
-set :app_user, 'geoblacklight'
+set :application, "geodiscovery"
+set :deploy_user, "geoblacklight"
+set :app_user, "geoblacklight"
 
-server "geodiscovery-dev.uwm.edu", user: fetch(:deploy_user), roles: %w{app db web}
+server "geodiscovery-dev.uwm.edu", user: fetch(:deploy_user), roles: %w[app db web]
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
@@ -25,8 +25,6 @@ set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -34,8 +32,6 @@ set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================

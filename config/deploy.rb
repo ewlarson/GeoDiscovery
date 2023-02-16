@@ -8,15 +8,15 @@ set :repo_url, "git@github.com:UWM-Libraries/GeoDiscovery.git"
 # Prompt to choose a tag (or name a branch), default to last listed tag
 # unless an environment variable was passed on the command line as in:
 # $ GEOBLACKLIGHT_RELEASE=1.0.0 bundle exec cap development deploy
-unless ARGV.include?('deploy:rollback')
+unless ARGV.include?("deploy:rollback")
   avail_tags = `git ls-remote --sort=version:refname --refs --tags git@github.com:UWM-Libraries/GeoDiscovery.git | cut -d/ -f3-`
-  set :branch, (ENV['GEOBLACKLIGHT_RELEASE'] || ask("release tag or branch:\n #{avail_tags}", avail_tags.chomp.split("\n").last))
+  set :branch, (ENV["GEOBLACKLIGHT_RELEASE"] || ask("release tag or branch:\n #{avail_tags}", avail_tags.chomp.split("\n").last))
 end
 
 # Ruby Version
 # set :ruby_version, '3.0.3'
-set :deploy_user, 'geoblacklight'
-set :app_user, 'geoblacklight'
+set :deploy_user, "geoblacklight"
+set :app_user, "geoblacklight"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"
