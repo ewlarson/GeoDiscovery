@@ -12,6 +12,7 @@ server "geodiscovery-dev.uwm.edu", user: fetch(:deploy_user), roles: %w[app db w
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"
+set :rails_env, "production"
 
 # role-based syntax
 # ==================
