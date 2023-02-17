@@ -14,7 +14,7 @@ unless ARGV.include?("deploy:rollback")
 end
 
 # Ruby Version
-set :ruby_version, '3.2.1'
+set :ruby_version, "3.2.1"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"

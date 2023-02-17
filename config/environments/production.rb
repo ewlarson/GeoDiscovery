@@ -102,7 +102,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter = :sidekiq
 
   # @TODO - Exception email notification
-  #Rails.application.config.middleware.use ExceptionNotification::Rack,
+  # Rails.application.config.middleware.use ExceptionNotification::Rack,
   #  # Blacklight uses its own 404 extension we need to ignore separately
   #  :ignore_exceptions => ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions,
   #  # Ignore exception notification from IPs defined in environment variable as comma-separated
