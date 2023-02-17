@@ -18,4 +18,8 @@ class HomepageTest < ApplicationSystemTestCase
 
     assert page.has_content?("Search Results")
   end
+
+  def test_map_geosearch
+    assert page.has_selector?("div.geosearch")
+  end
 end
