@@ -50,6 +50,7 @@ gem "bootsnap", require: false
 
 group :production do
   gem "mysql2"
+  gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 end
 
 group :development, :test do
@@ -61,6 +62,7 @@ group :development do
   gem "capistrano", "~> 3.17", require: false
   gem "capistrano-rails", "~> 1.6", require: false
   gem "capistrano-bundler", "~> 2.0.0"
+  gem "capistrano-passenger", "~> 0.2"
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
