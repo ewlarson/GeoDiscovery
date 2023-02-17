@@ -1,9 +1,20 @@
 require "blacklight/catalog"
 
 class CatalogController < ApplicationController
+  include BlacklightAdvancedSearch::Controller
   include Blacklight::Catalog
 
   configure_blacklight do |config|
+    
+    # Advanced config values
+    config.advanced_search[:enabled] = true
+    config.advanced_search ||= Blacklight::OpenStructWithHashAccess.new
+    # config.advanced_search[:qt] ||= 'advanced'
+    config.advanced_search[:url_key] ||= 'advanced'
+    config.advanced_search[:query_parser] ||= 'edismax'
+    config.advanced_search[:form_solr_parameters] ||= {}
+    
+
     # Ensures that JSON representations of Solr Documents can be retrieved using
     # the path /catalog/:id/raw
     # Please see https://github.com/projectblacklight/blacklight/pull/2006/
