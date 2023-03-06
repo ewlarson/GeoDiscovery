@@ -83,6 +83,10 @@ group :test do
   gem "webdrivers"
 end
 gem "blacklight", "~> 7.0"
+
+# BL Advanced Search / Pinned to EWL bug-fix
+# See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
+gem "blacklight_advanced_search", git: "https://github.com/ewlarson/blacklight_advanced_search.git", branch: "bl7-fix-gentle-hands"
 gem "geoblacklight", "~> 4.0"
 gem "sprockets", "< 4.0"
 
