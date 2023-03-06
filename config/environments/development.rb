@@ -70,4 +70,6 @@ Rails.application.configure do
 
   # NGROK - ngrok http -subdomain=uwm-demo 3000
   # config.hosts << "uwm-demo.ngrok.io"
+  
+  config.active_job.queue_adapter = :inline
 end
