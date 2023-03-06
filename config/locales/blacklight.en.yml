@@ -7,3 +7,5 @@ en:
       form:
         search:
           placeholder: 'Keyword(s) search...'
+    advanced_search:
+      more_options: 'Advanced'
