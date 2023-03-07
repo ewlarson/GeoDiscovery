@@ -369,6 +369,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     redis (4.8.1)
+    redis-client (0.13.0)
+      connection_pool
     regexp_parser (2.7.0)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -416,6 +418,11 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (7.0.6)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.11.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -528,6 +535,7 @@ DEPENDENCIES
   rsolr (>= 1.0, < 3)
   sassc-rails (~> 2.1)
   selenium-webdriver
+  sidekiq (~> 7.0, >= 7.0.6)
   simplecov
   sitemap_generator (~> 6.3)
   solr_wrapper (>= 0.3)
