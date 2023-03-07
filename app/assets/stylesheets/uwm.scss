@@ -39,38 +39,3 @@
   text-decoration: underline;
 }
 
-// Search results
-#documents {
-  .index_title {
-    font-size: 1rem;
-  }
-
-  .status-icons {
-    display: inline-block;
-
-    span {
-      min-width: 0px;
-    }
-  }
-
-  .thumbnail {
-    height: 100px;
-    width: 100px;
-    margin-left:auto;
-    margin-right: auto;
-    img {
-      width: inherit;
-    }
-  }
-
-  .icon .blacklight-icons {
-    height: 4.5rem;
-    width: 4.5rem;
-
-    svg {
-      height:95%;
-      width:95%;
-    }
-  }
-}
-
