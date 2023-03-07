@@ -7,6 +7,20 @@ GIT
       blacklight (~> 7.0)
       parslet
 
+GIT
+  remote: https://github.com/geoblacklight/geoblacklight_sidecar_images.git
+  revision: f2ee3fbd942cdd2cb4cce45595dd782b0a14c8c8
+  branch: feature/gblv4-aardvark
+  specs:
+    geoblacklight_sidecar_images (0.9.1)
+      faraday (>= 2.0)
+      geoblacklight (~> 4.0)
+      image_processing (~> 1.6)
+      mimemagic (~> 0.3)
+      mini_magick (~> 4.9.4)
+      rails (>= 5.2, < 7.1)
+      statesman (>= 3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -216,14 +230,6 @@ GEM
       mime-types
       rails (>= 6.1, < 7.1)
       rgeo-geojson
-    geoblacklight_sidecar_images (0.9.0)
-      faraday (>= 1.0)
-      geoblacklight (>= 3.3)
-      image_processing (~> 1.6)
-      mimemagic (~> 0.3)
-      mini_magick (~> 4.9.4)
-      rails (>= 5.2, < 7.1)
-      statesman (>= 3.4)
     globalid (1.1.0)
       activesupport (>= 5.0)
     handlebars_assets (0.23.9)
@@ -509,7 +515,7 @@ DEPENDENCIES
   devise-guests (~> 0.8)
   dotenv-rails (~> 2.8)
   geoblacklight (~> 4.0)
-  geoblacklight_sidecar_images (~> 0.9)
+  geoblacklight_sidecar_images!
   importmap-rails
   jbuilder
   jquery-rails
