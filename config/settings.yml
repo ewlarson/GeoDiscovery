@@ -68,7 +68,6 @@ FIELDS:
   :MODIFIED: 'gbl_mdModified_dt'
   :OVERLAP_FIELD: 'solr_bboxtype'
   :PUBLISHER: 'dct_publisher_sm'
-  :PROVENANCE: 'schema_provider_s'
   :PROVIDER: 'schema_provider_s'
   :REFERENCES: 'dct_references_s'
   :RELATION: 'dct_relation_sm'
@@ -89,7 +88,13 @@ FIELDS:
 
 # Institution deployed at
 INSTITUTION: 'University of Wisconsin-Milwaukee'
+
+# GeoBlacklight Sidecar Images
 INSTITUTION_LOCAL_NAME: 'University of Wisconsin-Milwaukee'
+PROVENANCE: 'schema_provider_s'
+INSTITUTION_GEOSERVER_URL: 'https://geoserver.princeton.edu'
+PROXY_GEOSERVER_URL: 'http://localhost:3000'
+PROXY_GEOSERVER_AUTH: 'Basic base64encodedusername:password'
 
 # Metadata shown in tool panel
 METADATA_SHOWN:
