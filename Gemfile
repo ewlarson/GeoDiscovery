@@ -51,7 +51,7 @@ gem "bootsnap", require: false
 group :production do
   gem "mysql2"
   gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
-  gem 'sidekiq', '~> 7.0', '>= 7.0.6'
+  gem "sidekiq", "~> 7.0", ">= 7.0.6"
 end
 
 group :development, :test do
@@ -90,7 +90,7 @@ gem "blacklight", "~> 7.0"
 gem "blacklight_advanced_search", git: "https://github.com/ewlarson/blacklight_advanced_search.git", branch: "bl7-fix-gentle-hands"
 gem "geoblacklight", "~> 4.0"
 gem "geoblacklight_sidecar_images", "~> 1.0"
-gem 'mini_magick', '~> 4.0'
+gem "mini_magick", "~> 4.0"
 gem "sprockets", "< 4.0"
 
 group :development, :test do

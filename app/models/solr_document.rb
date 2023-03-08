@@ -4,7 +4,7 @@
 class SolrDocument
   include Blacklight::Solr::Document
   include Geoblacklight::SolrDocument
- include WmsRewriteConcern
+  include WmsRewriteConcern
 
   # self.unique_key = 'id'
   self.unique_key = Settings.FIELDS.UNIQUE_KEY
@@ -21,18 +21,18 @@ class SolrDocument
   # and Blacklight::Document::SemanticFields#to_semantic_values
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
-        def sidecar
-          # Find or create, and set version
-          sidecar = SolrDocumentSidecar.where(
-            document_id: id,
-            document_type: self.class.to_s
-          ).first_or_create do |sc|
-            sc.version = self._source["_version_"]
-          end
+  def sidecar
+    # Find or create, and set version
+    sidecar = SolrDocumentSidecar.where(
+      document_id: id,
+      document_type: self.class.to_s
+    ).first_or_create do |sc|
+      sc.version = _source["_version_"]
+    end
 
-          sidecar.version = self._source["_version_"]
-          sidecar.save
+    sidecar.version = _source["_version_"]
+    sidecar.save
 
-          sidecar
-        end
+    sidecar
+  end
 end
