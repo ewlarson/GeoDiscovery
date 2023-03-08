@@ -82,6 +82,7 @@ GEM
     ast (2.4.2)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
+    awesome_print (1.9.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     blacklight (7.33.1)
@@ -218,6 +219,10 @@ GEM
       rgeo-geojson
     globalid (1.1.0)
       activesupport (>= 5.0)
+    haml (6.1.1)
+      temple (>= 0.8.2)
+      thor
+      tilt
     handlebars_assets (0.23.9)
       execjs (~> 2.0)
       sprockets (>= 2.0.0)
@@ -424,6 +429,7 @@ GEM
       standard
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    temple (0.10.0)
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.1)
@@ -469,6 +475,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  awesome_print
   blacklight (~> 7.0)
   blacklight_advanced_search!
   bootsnap
@@ -484,6 +491,7 @@ DEPENDENCIES
   devise-guests (~> 0.8)
   dotenv-rails (~> 2.8)
   geoblacklight (~> 4.0)
+  haml
   importmap-rails
   jbuilder
   jquery-rails

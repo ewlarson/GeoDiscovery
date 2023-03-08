@@ -106,3 +106,7 @@ gem "dotenv-rails", "~> 2.8"
 
 # Standard
 gem "standardrb"
+
+# Admin View
+gem "haml"
+gem "awesome_print"
