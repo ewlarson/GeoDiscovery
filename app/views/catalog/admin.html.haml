@@ -1,0 +1,32 @@
+%h3=@document[blacklight_config.index.title_field]
+
+%table.table.table-borderless.table-sm
+  %thead
+    %tr
+      %th Provenance
+      %th Indexed
+
+  %tbody
+    %tr
+      %td= @document._source['schema_provider_s']
+      %td= DateTime.parse(@document._source['timestamp']).strftime('%D %r')
+%hr
+
+%h3 SolrDocument
+%div.solr-document
+  != ap @document.to_h
+
+%br
+%h3 Item Viewer
+%table.table
+  %thead
+    %tr
+      %th Protocol
+      %th Endpoint
+  %tbody
+    %tr
+      %td= @document.viewer_protocol
+      %td= link_to(@document.viewer_endpoint, @document.viewer_endpoint)
+
+:javascript
+  new Readmore( '.solr-document', { maxHeight: 40 } );
