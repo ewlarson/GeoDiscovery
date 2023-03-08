@@ -98,8 +98,8 @@ Rails.application.configure do
   # @TODO - Google Analytics - Prod
   # config.google_analytics = 'UA-82483267-1'
 
-  # @TODO - Background jobs
-  # config.active_job.queue_adapter = :sidekiq
+  # Background jobs
+  config.active_job.queue_adapter = :sidekiq
 
   # @TODO - Exception email notification
   # Rails.application.config.middleware.use ExceptionNotification::Rack,
