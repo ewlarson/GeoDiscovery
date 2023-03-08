@@ -89,10 +89,7 @@ gem "blacklight", "~> 7.0"
 # See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
 gem "blacklight_advanced_search", git: "https://github.com/ewlarson/blacklight_advanced_search.git", branch: "bl7-fix-gentle-hands"
 gem "geoblacklight", "~> 4.0"
-
-# GBL Sidecar Images / Pinned to GBLv4 support branch until v1.0 released
-# See: https://github.com/geoblacklight/geoblacklight_sidecar_images/pull/37
-gem "geoblacklight_sidecar_images", git: "https://github.com/geoblacklight/geoblacklight_sidecar_images.git", branch: "feature/gblv4-aardvark"
+gem "geoblacklight_sidecar_images", "~> 1.0"
 gem 'mini_magick', '~> 4.0'
 gem "sprockets", "< 4.0"
 
