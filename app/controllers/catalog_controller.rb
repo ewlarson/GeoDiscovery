@@ -351,4 +351,10 @@ class CatalogController < ApplicationController
       end
     end
   end
+
+  # Administrative view of document
+  # - Pretty JSON
+  def admin
+    _deprecated_response, @document = search_service.fetch(params[:id])
+  end
 end
