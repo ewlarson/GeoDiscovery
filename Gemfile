@@ -106,3 +106,7 @@ gem "dotenv-rails", "~> 2.8"
 
 # Standard
 gem "standardrb"
+
+# Cron Tasks
+gem "whenever", "~> 1.0.0"
+gem "sitemap_generator", "~> 6.3"

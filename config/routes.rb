@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "robots.:format" => "robots#robots"
+
   mount Blacklight::Engine => "/"
   mount BlacklightAdvancedSearch::Engine => "/"
 
