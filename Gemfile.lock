@@ -521,7 +521,7 @@ DEPENDENCIES
   devise-guests (~> 0.8)
   dotenv-rails (~> 2.8)
   geoblacklight (~> 4.0)
-  geoblacklight_sidecar_images (~> 0.9)
+  geoblacklight_sidecar_images (~> 1.0)
   haml
   importmap-rails
   jbuilder
