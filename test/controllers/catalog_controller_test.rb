@@ -7,7 +7,7 @@ class CatalogControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should return admin view" do
-    get '/catalog/mit-001145244/admin'
+    get "/catalog/mit-001145244/admin"
     assert_response :success
   end
 end
