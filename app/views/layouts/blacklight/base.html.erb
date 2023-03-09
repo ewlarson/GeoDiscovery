@@ -21,6 +21,7 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'analytics' %>
 
     <!-- GeoSearch -->
     <link  href="https://unpkg.com/leaflet-geosearch@latest/assets/css/leaflet.css" rel="stylesheet" />
@@ -37,7 +38,7 @@
     </nav>
     <%= render partial: 'shared/header_navbar' %>
 
-    <main id="main-container" class="container-fluid" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+    <main id="main-container" class="container-fluid" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>" data-analytics-id="<%= Rails.configuration.google_analytics %>">
       <%= content_for(:container_header) %>
 
       <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>

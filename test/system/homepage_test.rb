@@ -25,4 +25,8 @@ class HomepageTest < ApplicationSystemTestCase
   def test_map_geosearch
     assert page.has_selector?("div.geosearch")
   end
+
+  def test_google_analytics
+    assert page.has_selector?("[data-analytics-id]")
+  end
 end

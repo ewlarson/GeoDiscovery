@@ -72,4 +72,7 @@ Rails.application.configure do
   # config.hosts << "uwm-demo.ngrok.io"
 
   config.active_job.queue_adapter = :inline
+
+  # Google Analytics - Dev
+  config.google_analytics = "G-XXXXXXXX"
 end
