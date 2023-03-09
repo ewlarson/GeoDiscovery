@@ -117,3 +117,6 @@ gem "sitemap_generator", "~> 6.3"
 # Admin View
 gem "haml"
 gem "awesome_print"
+
+# GeoCombine via the UWM Libraries Fork
+gem "geo_combine", git: "https://github.com/UWM-Libraries/GeoCombine.git", branch: "main"

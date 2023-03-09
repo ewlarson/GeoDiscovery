@@ -8,50 +8,70 @@ Make sure you have Java installed. On a Mac with homebrew, that can be as simple
 
 ### Clone the GeoDiscovery repository, and cd into it
 
-`git clone git@github.com:UWM-Libraries/GeoDiscovery.git`
-`cd GeoDiscovery`
+```bash
+git clone git@github.com:UWM-Libraries/GeoDiscovery.git
+cd GeoDiscovery
+```
 
 ### Configure your DotEnv files
 
 .example.env.test and .example.env.development
 
-`cp .example.env.test .env.test`
-`cp .example.env.development .env.development`
+```bash
+cp .example.env.test .env.test
+cp .example.env.development .env.development
+```
 
-After you copy the files, update them to include your database and solr connections
+After you copy the files, update them to include your database and solr connections.
 
 ### Bundle dependencies
 
-Bundle the application's Rubygem dependencies via:
+The application's [RubyGem](https://rubygems.org/) dependencies are listed in the project `Gemfile`. Bundle the gems via this command:
 
-`bundle install`
+```bash
+bundle install
+```
+
+If the `Gemfile` has changed recently, you might need to run an additional command to get all the latest updates:
+
+```bash
+bundle update
+```
 
 ### Database initialization
 
-You'll need a local database (sqlite) for development and test modes
+You'll need a local database for development and test modes. Both can just use sqlite.
 
-`bundle exec rake db:create`
-`bundle exec rake db:migrate`
+```bash
+bundle exec rake db:create
+bundle exec rake db:migrate
+```
 
-In a production environment, you'll want a production capacity database like MySQL or PostgreSQL.
+In a production environment, you'll want a production capacity database like MySQL/MariaDB or PostgreSQL (recommended).
 
 ### Run the application
 
-This rake task will run Solr and Puma and populate the application with the test fixture Aardvark JSON files:
+This rake task will run Solr and Puma and populate the application with the project's test fixture Aardvark JSON files:
 
-`bundle exec rake uwm:server`
+```bash
+bundle exec rake uwm:server
+```
 
 ### Run the test suite
 
-To run the project test suite, run this rake task below:
+To run the project test suite, run this rake task below: (you'll need to stop the command above for the test suite to run correctly):
 
-`RAILS_ENV=test bundle exec rake ci`
+```bash
+RAILS_ENV=test bundle exec rake ci
+```
 
-### Run the Ruby linter
+### Run the Ruby linter - Standard
+
+GeoBlacklight uses [Standard](https://github.com/testdouble/standard) to ensure the application code is consistent and follows Ruby community best practices. Run the linter via the command below:
 
 `bundle exec standardrb`
 
-### Harvest Thumbnails
+### Harvest Thumbnails - GeoBlacklight Sidecar Images
 
 This project uses the [GeoBlacklight Sidecar Images](https://github.com/geoblacklight/geoblacklight_sidecar_images) gem to collect search result thumbnails.
 
@@ -67,3 +87,25 @@ That gem includes several helpful rake tasks to manage thumbnail images:
 * DOC_ID='stanford-cz128vq0535' bundle exec rake gblsci:images:harvest_doc_id
 
 Read more about each rake task on the gem [README](https://github.com/geoblacklight/geoblacklight_sidecar_images) file.
+
+### Harvest Metadata - GeoCombine
+
+You can harvest OGM Aardark records via the [GeoCombine](https://github.com/OpenGeoMetadata/GeoCombine) gem. The [OMG metadata repositories](https://github.com/OpenGeoMetadata) are hosted on GitHub.
+
+Clone metadata from an individual institution like this:
+
+```bash
+bundle exec rake geocombine:clone\[edu.umn\]
+```
+
+Clone all the OMG repositories like this:
+
+```bash
+bundle exec rake geocombine:clone
+```
+
+Index the documents you have harvested via this rake task:
+
+```bash
+bundle exec rake geocombine:index
+```
