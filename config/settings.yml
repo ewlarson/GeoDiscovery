@@ -1,3 +1,6 @@
+# Set Schema Version for GeoCombine
+SCHEMA_VERSION: Aardvark
+
 # Configurable Logo Used for CartoDB export
 APPLICATION_LOGO_URL: 'http://geoblacklight.org/images/geoblacklight-logo.png'
 

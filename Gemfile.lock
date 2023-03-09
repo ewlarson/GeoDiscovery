@@ -1,4 +1,19 @@
 GIT
+  remote: https://github.com/UWM-Libraries/GeoCombine.git
+  revision: c48672fd155de4232ee2c77712981d6bf9ede40d
+  branch: main
+  specs:
+    geo_combine (0.7.0)
+      activesupport
+      faraday-net_http_persistent (~> 2.0)
+      git
+      json-schema
+      nokogiri
+      rsolr
+      sanitize
+      thor
+
+GIT
   remote: https://github.com/ewlarson/blacklight_advanced_search.git
   revision: c6c7aedeefbad902183b87fc5610518ab8a2f488
   branch: bl7-fix-gentle-hands
@@ -199,14 +214,6 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    geo_combine (0.7.0)
-      activesupport
-      faraday-net_http_persistent (~> 2.0)
-      json-schema
-      nokogiri
-      rsolr
-      sanitize
-      thor
     geoblacklight (4.0.0)
       blacklight (~> 7.12)
       coderay
@@ -226,6 +233,9 @@ GEM
       mini_magick (~> 4.9.4)
       rails (>= 5.2, < 7.1)
       statesman (>= 3.4)
+    git (1.17.2)
+      addressable (~> 2.8)
+      rchardet (~> 1.8)
     globalid (1.1.0)
       activesupport (>= 5.0)
     haml (6.1.1)
@@ -368,6 +378,7 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    rchardet (1.8.0)
     redis (4.8.1)
     redis-client (0.13.0)
       connection_pool
@@ -520,6 +531,7 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.8)
   dotenv-rails (~> 2.8)
+  geo_combine!
   geoblacklight (~> 4.0)
   geoblacklight_sidecar_images (~> 1.0)
   haml
