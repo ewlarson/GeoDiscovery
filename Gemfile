@@ -120,3 +120,7 @@ gem "awesome_print"
 
 # GeoCombine via the UWM Libraries Fork
 gem "geo_combine", git: "https://github.com/UWM-Libraries/GeoCombine.git", branch: "main"
+
+# ED SSH Key support
+gem "ed25519", ">=1.2", "< 2.0"
+gem "bcrypt_pbkdf", "~> 1.0", "< 2.0"
