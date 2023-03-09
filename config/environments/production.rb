@@ -96,7 +96,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Google Analytics - Prod
-  config.google_analytics = 'G-SBMT3M6EV2'
+  config.google_analytics = "G-SBMT3M6EV2"
 
   # Background jobs
   config.active_job.queue_adapter = :sidekiq

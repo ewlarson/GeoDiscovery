@@ -60,5 +60,5 @@ Rails.application.configure do
   config.action_controller.action_on_unpermitted_parameters = :raise
 
   # Google Analytics - Test
-  config.google_analytics = 'G-XXXXXXXX'
+  config.google_analytics = "G-XXXXXXXX"
 end
