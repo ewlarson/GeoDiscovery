@@ -2,8 +2,8 @@
 # Learn more: http://github.com/javan/whenever
 
 # Harvest thumbnail images for search results
-every :day, at: '12:05am', roles: [:app] do
-  rake 'gblsci:images:harvest_retry'
+every :day, at: "12:05am", roles: [:app] do
+  rake "gblsci:images:harvest_retry"
 end
 
 # Build the sitemap
