@@ -8,4 +8,6 @@ updates:
   - package-ecosystem: 'bundler'
     directory: '/'
     schedule:
-      interval: 'daily'   
+      interval: 'daily'
+    ignore:
+      - dependency-name: "bootstrap"
