@@ -19,3 +19,7 @@
 #main-container [data-map="home"] .leaflet-control-container .search-control a:hover {
   //color: $white;
 }
+
+#wrapper-map {
+  min-height:400px;
+}
