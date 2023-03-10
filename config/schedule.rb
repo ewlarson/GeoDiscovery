@@ -1,6 +1,11 @@
 # Use this file to easily define all of your cron jobs.
 # Learn more: http://github.com/javan/whenever
 
+# Harvest thumbnail images for search results
+every :day, at: "12:05am", roles: [:app] do
+  rake "gblsci:images:harvest_retry"
+end
+
 # Build the sitemap
 every :day, at: "12:30am", roles: [:app] do
   rake "sitemap:refresh"
