@@ -65,12 +65,12 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  # @TODO - Email configuration
-  # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.delivery_method = :sendmail
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = true
+  # Application Email configuration
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: %("GeoDiscovery" <notifier@#{`hostname`.strip}>)}
+  config.action_mailer.default_url_options = {host: "geodiscovery.uwm.edu"}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -100,16 +100,4 @@ Rails.application.configure do
 
   # Background jobs
   config.active_job.queue_adapter = :sidekiq
-
-  # @TODO - Exception email notification
-  # Rails.application.config.middleware.use ExceptionNotification::Rack,
-  #  # Blacklight uses its own 404 extension we need to ignore separately
-  #  :ignore_exceptions => ['Blacklight::Exceptions::RecordNotFound'] + ExceptionNotifier.ignored_exceptions,
-  #  # Ignore exception notification from IPs defined in environment variable as comma-separated
-  #  :ignore_if => ->(env, exception) { ENV['EXCEPTION_NOTIFIER_EXCLUDE_IPS'].to_s.split(/[, ]+/).include?(env['REMOTE_ADDR']) },
-  #  :email => {
-  #    :email_prefix => "[GeoDiscovery Error] ",
-  #    :sender_address => %{"GeoDiscovery" <geoblacklight@#{`hostname`.strip}>},
-  #    :exception_recipients => %w{holten@uwm.edu srappel@uwm.edu  }
-  #  }
 end

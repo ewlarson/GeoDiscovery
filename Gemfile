@@ -124,3 +124,6 @@ gem "geo_combine", git: "https://github.com/UWM-Libraries/GeoCombine.git", branc
 # ED SSH Key support
 gem "ed25519", ">=1.2", "< 2.0"
 gem "bcrypt_pbkdf", "~> 1.0", "< 2.0"
+
+# ExceptionNotification
+gem "exception_notification", "~> 4.5"
