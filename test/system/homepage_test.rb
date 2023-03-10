@@ -27,6 +27,6 @@ class HomepageTest < ApplicationSystemTestCase
   end
 
   def test_google_analytics
-    assert page.has_selector?("[data-analytics-id]")
+    assert page.source.scan(/<!-- Google tag (gtag.js) -->/m)
   end
 end
