@@ -123,7 +123,7 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-bundler (2.0.1)
+    capistrano-bundler (2.1.0)
       capistrano (~> 3.1)
     capistrano-passenger (0.2.1)
       capistrano (~> 3.0)
@@ -349,7 +349,7 @@ GEM
       rake (>= 0.8.1)
     popper_js (1.16.1)
     public_suffix (5.0.1)
-    puma (5.6.5)
+    puma (6.1.1)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.6.3)
@@ -384,7 +384,8 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     rchardet (1.8.0)
-    redis (4.8.1)
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
     redis-client (0.14.0)
       connection_pool
     regexp_parser (2.7.0)
@@ -481,7 +482,7 @@ GEM
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
-    twitter-typeahead-rails (0.11.1.pre.corejavascript)
+    twitter-typeahead-rails (0.11.1)
       actionpack (>= 3.1)
       jquery-rails
       railties (>= 3.1)
@@ -528,7 +529,7 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 4.0)
   capistrano (~> 3.17)
-  capistrano-bundler (~> 2.0.0)
+  capistrano-bundler (~> 2.1.0)
   capistrano-passenger (~> 0.2)
   capistrano-rails (~> 1.6)
   capybara
@@ -549,9 +550,9 @@ DEPENDENCIES
   mini_magick (~> 4.0)
   mysql2
   passenger (>= 5.0.25)
-  puma (~> 5.0)
+  puma (~> 6.1)
   rails (~> 7.0.4, >= 7.0.4.2)
-  redis (~> 4.0)
+  redis (~> 5.0)
   rsolr (>= 1.0, < 3)
   sassc-rails (~> 2.1)
   selenium-webdriver
@@ -565,7 +566,7 @@ DEPENDENCIES
   standardrb
   stimulus-rails
   turbo-rails
-  twitter-typeahead-rails (= 0.11.1.pre.corejavascript)
+  twitter-typeahead-rails (= 0.11.1)
   tzinfo-data
   web-console
   webdrivers
