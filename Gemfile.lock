@@ -478,7 +478,7 @@ GEM
       rubocop-performance (~> 1.16.0)
     standardrb (1.0.1)
       standard
-    statesman (10.2.0)
+    statesman (10.2.1)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     temple (0.10.0)
