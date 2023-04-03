@@ -13,7 +13,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.2
+        ruby-version: 3.2.1
     - name: Install dependencies
       run: bundle install
     - name: Run linter
@@ -26,7 +26,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.2
+        ruby-version: 3.2.1
     - name: Install json schema validator
       run: gem install json_schemer
     - name: Run json_schemer against aarkvark fixtures
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby_version: ['3.2']
+        ruby_version: ['3.2.1']
         rails_version: [7.0.4.2]
         bundler_version: [2.1.1]
         faraday_version: ['>= 2']
