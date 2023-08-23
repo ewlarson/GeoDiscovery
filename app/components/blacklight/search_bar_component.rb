@@ -13,10 +13,10 @@ module Blacklight
     def initialize(
       url:, params:,
       advanced_search_url: nil, presenter: nil,
-      classes: ['search-query-form'], prefix: nil,
-      method: 'GET', q: nil, query_param: :q,
+      classes: ["search-query-form"], prefix: nil,
+      method: "GET", q: nil, query_param: :q,
       search_field: nil, search_fields: nil, autocomplete_path: nil,
-      autofocus: nil, i18n: { scope: 'blacklight.search.form' },
+      autofocus: nil, i18n: {scope: "blacklight.search.form"},
       form_options: {}
     )
       @url = url
@@ -36,8 +36,8 @@ module Blacklight
 
       return if presenter.nil?
 
-      Deprecation.warn(self, 'SearchBarComponent no longer uses a SearchBarPresenter, the presenter: param will be removed in 8.0. ' \
-        'Set advanced_search.enabled, autocomplete_enabled, and enable_search_bar_autofocus on BlacklightConfiguration')
+      Deprecation.warn(self, "SearchBarComponent no longer uses a SearchBarPresenter, the presenter: param will be removed in 8.0. " \
+        "Set advanced_search.enabled, autocomplete_enabled, and enable_search_bar_autofocus on BlacklightConfiguration")
     end
     # rubocop:enable Metrics/ParameterLists
 
@@ -51,7 +51,7 @@ module Blacklight
       if @autofocus.nil?
         blacklight_config.enable_search_bar_autofocus &&
           controller.is_a?(Blacklight::Catalog) &&
-          controller.action_name == 'index' &&
+          controller.action_name == "index" &&
           !controller.has_search_parameters?
       else
         @autofocus
@@ -60,10 +60,10 @@ module Blacklight
 
     def search_fields
       @search_fields ||= blacklight_config.search_fields.values
-                                          .select { |field_def| helpers.should_render_field?(field_def) }
-                                          .collect do |field_def|
+        .select { |field_def| helpers.should_render_field?(field_def) }
+        .collect do |field_def|
         [helpers.label_for_search_field(field_def.key),
-         field_def.key]
+          field_def.key]
       end
     end
 
@@ -77,14 +77,14 @@ module Blacklight
       helpers.blacklight_config
     end
 
-    def render_hash_as_hidden_fields(*args)
+    def render_hash_as_hidden_fields(*)
       Deprecation.silence(Blacklight::HashAsHiddenFieldsHelperBehavior) do
-        helpers.render_hash_as_hidden_fields(*args)
+        helpers.render_hash_as_hidden_fields(*)
       end
     end
 
-    def scoped_t(key, **args)
-      t(key, default: t(key, scope: 'blacklight.search.form'), **@i18n, **args)
+    def scoped_t(key, **)
+      t(key, default: t(key, scope: "blacklight.search.form"), **@i18n, **)
     end
   end
 end

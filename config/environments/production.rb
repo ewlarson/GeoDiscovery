@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'active_support/core_ext/integer/time'
+require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -71,8 +71,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = { from: %("GeoDiscovery" <notifier@#{`hostname`.strip}>) }
-  config.action_mailer.default_url_options = { host: 'geodiscovery.uwm.edu' }
+  config.action_mailer.default_options = {from: %("GeoDiscovery" <notifier@#{`hostname`.strip}>)}
+  config.action_mailer.default_url_options = {host: "geodiscovery.uwm.edu"}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -88,7 +88,7 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new "app-name")
 
-  if ENV['RAILS_LOG_TO_STDOUT'].present?
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger = ActiveSupport::Logger.new($stdout)
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
@@ -98,7 +98,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Google Analytics - Prod
-  config.google_analytics = 'G-SBMT3M6EV2'
+  config.google_analytics = "G-SBMT3M6EV2"
 
   # Background jobs
   config.active_job.queue_adapter = :sidekiq

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'exception_notification/rails'
+require "exception_notification/rails"
 
 ExceptionNotification.configure do |config|
   # Ignore additional exception types.
@@ -20,7 +20,7 @@ ExceptionNotification.configure do |config|
 
   # Email notifier sends notifications by email.
   config.add_notifier :email, {
-    email_prefix: '[GeoDiscovery ERROR]',
+    email_prefix: "[GeoDiscovery ERROR]",
     sender_address: %("GeoDiscovery" <notifier@#{`hostname`.strip}>),
     exception_recipients: %w[digilib@uwm.edu]
   }

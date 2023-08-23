@@ -1,26 +1,26 @@
 # frozen_string_literal: true
 
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.17.1'
+lock "~> 3.17.1"
 
-set :application, 'geodiscovery'
-set :repo_url, 'git@github.com:UWM-Libraries/GeoDiscovery.git'
+set :application, "geodiscovery"
+set :repo_url, "git@github.com:UWM-Libraries/GeoDiscovery.git"
 
 # Default branch is :main
 # Prompt to choose a tag (or name a branch), default to last listed tag
 # unless an environment variable was passed on the command line as in:
 # $ GEOBLACKLIGHT_RELEASE=1.0.0 bundle exec cap development deploy
-unless ARGV.include?('deploy:rollback')
+unless ARGV.include?("deploy:rollback")
   avail_tags = `git ls-remote --sort=version:refname --refs --tags git@github.com:UWM-Libraries/GeoDiscovery.git | cut -d/ -f3-`
   set :branch,
-      (ENV['GEOBLACKLIGHT_RELEASE'] || ask("release tag or branch:\n #{avail_tags}", avail_tags.chomp.split("\n").last))
+    (ENV["GEOBLACKLIGHT_RELEASE"] || ask("release tag or branch:\n #{avail_tags}", avail_tags.chomp.split("\n").last))
 end
 
 # Ruby Version
-set :ruby_version, '3.2.1'
+set :ruby_version, "3.2.1"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/var/www/rubyapps/uwm-geoblacklight'
+set :deploy_to, "/var/www/rubyapps/uwm-geoblacklight"
 
 set :migration_role, :app
 
@@ -35,14 +35,14 @@ set :migration_role, :app
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, 'config/blacklight.yml', 'config/database.yml', 'config/master.key'
+append :linked_files, "config/blacklight.yml", "config/database.yml", "config/master.key"
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/webpacker', 'public/system', 'vendor',
-       'storage'
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/webpacker", "public/system", "vendor",
+  "storage"
 
 # tmp directory is user-specific
-set :tmp_dir, '/home/geoblacklight/tmp/'
+set :tmp_dir, "/home/geoblacklight/tmp/"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
