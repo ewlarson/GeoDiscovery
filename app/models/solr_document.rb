@@ -27,10 +27,10 @@ class SolrDocument
       document_id: id,
       document_type: self.class.to_s
     ).first_or_create do |sc|
-      sc.version = _source["_version_"]
+      sc.version = _source['_version_']
     end
 
-    sidecar.version = _source["_version_"]
+    sidecar.version = _source['_version_']
     sidecar.save
 
     sidecar

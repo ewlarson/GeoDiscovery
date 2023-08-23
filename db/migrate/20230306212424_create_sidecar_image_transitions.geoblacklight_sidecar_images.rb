@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This migration comes from geoblacklight_sidecar_images (originally 20180118203519)
 class CreateSidecarImageTransitions < ActiveRecord::Migration[5.2]
   def change
@@ -18,13 +20,13 @@ class CreateSidecarImageTransitions < ActiveRecord::Migration[5.2]
     add_foreign_key :sidecar_image_transitions, :solr_document_sidecars
 
     add_index(:sidecar_image_transitions,
-      [:solr_document_sidecar_id, :sort_key],
-      unique: true,
-      name: "index_sidecar_image_transitions_parent_sort")
+              %i[solr_document_sidecar_id sort_key],
+              unique: true,
+              name: 'index_sidecar_image_transitions_parent_sort')
     add_index(:sidecar_image_transitions,
-      [:solr_document_sidecar_id, :most_recent],
-      unique: true,
+              %i[solr_document_sidecar_id most_recent],
+              unique: true,
 
-      name: "index_sidecar_image_transitions_parent_most_recent")
+              name: 'index_sidecar_image_transitions_parent_most_recent')
   end
 end
