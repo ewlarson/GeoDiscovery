@@ -35,4 +35,9 @@ class SolrDocument
 
     sidecar
   end
+
+  # Show the download button regardless of restriction
+  def public?
+    true
+  end
 end
