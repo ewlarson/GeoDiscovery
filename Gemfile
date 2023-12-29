@@ -85,7 +85,7 @@ group :test do
   gem "simplecov", require: false
   gem "webdrivers"
 end
-gem "blacklight", "~> 7.34"
+gem "blacklight", "~> 7.35"
 
 # BL Advanced Search / Pinned to EWL bug-fix
 # See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
