@@ -132,4 +132,3 @@ gem "ed25519", ">=1.2", "< 2.0"
 gem "exception_notification", "~> 4.5"
 
 gem "base64", "~> 0.1.1"
-
