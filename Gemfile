@@ -62,7 +62,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "capistrano", "~> 3.18", require: false
+  gem "capistrano", "~> 3.17.1", require: false
   gem "capistrano-bundler", "~> 2.1.0"
   gem "capistrano-passenger", "~> 0.2"
   gem "capistrano-rails", "~> 1.6", require: false
@@ -130,3 +130,6 @@ gem "ed25519", ">=1.2", "< 2.0"
 
 # ExceptionNotification
 gem "exception_notification", "~> 4.5"
+
+gem "base64", "~> 0.1.1"
+
