@@ -22,3 +22,8 @@ end
 every :day, at: "2:30am", roles: [:app] do
   rake "blacklight:delete_old_searches[7]"
 end
+
+every :tuesday, at: '9:30 am', roles: [:app] do
+  rake 'rake geocombine:pull'
+  rake 'rake geocombind:index'
+end
