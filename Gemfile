@@ -122,7 +122,7 @@ gem "awesome_print"
 gem "haml"
 
 # GeoCombine via the UWM Libraries Fork
-gem 'geo_combine', '>= 0.9' # For OpenGeoMetadata indexing
+gem "geo_combine", ">= 0.9" # For OpenGeoMetadata indexing
 
 # ED SSH Key support
 gem "bcrypt_pbkdf", "~> 1.0", "< 2.0"
