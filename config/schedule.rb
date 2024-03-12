@@ -22,3 +22,10 @@ end
 every :day, at: "2:30am", roles: [:app] do
   rake "blacklight:delete_old_searches[7]"
 end
+
+# Updates the UWM OpenGeoMetadata directory (git pull) and re-index
+every :tuesday, at: "1:00 pm", roles: [:app] do
+  rake "geocombine:pull[edu.uwm]"
+  # Add additional repositories once tested
+  rake "geocombine:index"
+end
