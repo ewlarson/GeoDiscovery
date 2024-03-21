@@ -24,8 +24,27 @@ every :day, at: "2:30am", roles: [:app] do
 end
 
 # Updates the UWM OpenGeoMetadata directory (git pull) and re-index
-every :tuesday, at: "1:00 pm", roles: [:app] do
+every :monday, at: "4:00 am", roles: [:app] do
+  # Ours
   rake "geocombine:pull[edu.uwm]"
-  # Add additional repositories once tested
+  # Direct from GeoCombine
+  rake "geocombine:pull[edu.uchicago]"
+  rake "geocombine:pull[edu.illinois]"
+  rake "geocombine:pull[edu.indiana]"
+  rake "geocombine:pull[edu.uiowa]"
+  rake "geocombine:pull[edu.umd]"
+  rake "geocombine:pull[edu.msu]"
+  rake "geocombine:pull[edu.umn]"
+  rake "geocombine:pull[edu.unl]"
+  rake "geocombine:pull[edu.nyu]"
+  rake "geocombine:pull[edu.osu]"
+  rake "geocombine:pull[edu.psu]"
+  rake "geocombine:pull[edu.purdue]"
+  rake "geocombine:pull[edu.rutgers]"
+  rake "geocombine:pull[edu.umich]"
+  # Metadata We've Converted
+  rake "geocombine:pull[edu.wisc.aardvark]"
+  rake "geocombine:pull[edu.uwm.converted]"
+  # Index
   rake "geocombine:index"
 end
