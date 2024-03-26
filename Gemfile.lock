@@ -384,7 +384,7 @@ GEM
     rgeo (3.0.1)
     rgeo-geojson (2.1.1)
       rgeo (>= 1.0.0)
-    rsolr (2.5.0)
+    rsolr (2.6.0)
       builder (>= 2.1.2)
       faraday (>= 0.9, < 3, != 2.0.0)
     rubocop (1.62.1)
