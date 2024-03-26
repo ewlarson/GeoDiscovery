@@ -153,10 +153,10 @@ GEM
       devise
     docile (1.4.0)
     domain_name (0.6.20240107)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
+    dotenv (3.1.0)
+    dotenv-rails (3.1.0)
+      dotenv (= 3.1.0)
+      railties (>= 6.1)
     ed25519 (1.3.0)
     erubi (1.12.0)
     exception_notification (4.5.0)
@@ -333,7 +333,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.7.3)
-    rack (2.2.8.1)
+    rack (2.2.9)
     rack-test (2.1.0)
       rack (>= 1.3)
     rails (7.0.8.1)
@@ -532,7 +532,7 @@ DEPENDENCIES
   debug
   devise
   devise-guests (~> 0.8)
-  dotenv-rails (~> 2.8)
+  dotenv-rails (~> 3.1)
   ed25519 (>= 1.2, < 2.0)
   exception_notification (~> 4.5)
   geo_combine (>= 0.9)
