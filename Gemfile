@@ -108,7 +108,7 @@ gem "sassc-rails", "~> 2.1"
 gem "twitter-typeahead-rails", "0.11.1"
 
 # ENV
-gem "dotenv-rails", "~> 2.8"
+gem "dotenv-rails", "~> 3.1"
 
 # Standard
 gem "standardrb"
