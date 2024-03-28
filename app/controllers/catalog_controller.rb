@@ -118,7 +118,7 @@ class CatalogController < ApplicationController
     config.add_facet_field Settings.FIELDS.THEME, label: "Theme", limit: 10
     config.add_facet_field Settings.FIELDS.CREATOR, label: "Creator", limit: 10
     config.add_facet_field Settings.FIELDS.PUBLISHER, label: "Publisher", limit: 10
-    #config.add_facet_field Settings.FIELDS.GEOREFERENCED, label: "Georeferenced", limit: 3
+    # config.add_facet_field Settings.FIELDS.GEOREFERENCED, label: "Georeferenced", limit: 3
 
     # GEOBLACKLIGHT APPLICATION FACETS
 

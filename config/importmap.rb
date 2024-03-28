@@ -8,4 +8,4 @@ pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "leaflet" # @1.9.4
-pin '@allmaps/leaflet', to: "@allmaps--leaflet.js"
+pin "@allmaps/leaflet", to: "@allmaps--leaflet.js"
