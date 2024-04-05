@@ -187,7 +187,7 @@ GEM
       rsolr
       sanitize
       thor
-    geoblacklight (4.4.0.rc1)
+    geoblacklight (4.4.0)
       blacklight (~> 7.0)
       coderay
       config
@@ -550,7 +550,7 @@ DEPENDENCIES
   ed25519 (>= 1.2, < 2.0)
   exception_notification (~> 4.5)
   geo_combine (>= 0.9)
-  geoblacklight (= 4.4.0.rc1)
+  geoblacklight (~> 4.4)
   geoblacklight_sidecar_images (~> 1.0)
   haml
   importmap-rails
