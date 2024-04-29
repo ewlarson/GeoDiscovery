@@ -77,5 +77,5 @@ Rails.application.configure do
 
   # Google Analytics - Dev
   config.google_analytics = "G-XXXXXXXX"
-        config.active_job.queue_adapter = :inline
+  config.active_job.queue_adapter = :inline
 end
