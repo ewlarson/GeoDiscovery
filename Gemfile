@@ -30,11 +30,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-<<<<<<< HEAD
-gem "redis", "~> 5.2.0"
-=======
 gem "redis", "~> 5.0"
->>>>>>> parent of b3acf3b (roll back redis)
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 gem "kredis"
