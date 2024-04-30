@@ -62,8 +62,8 @@ module Blacklight
     ##
     # Open Search discovery tag for HTML <head> links
     # @return [String]
-    def opensearch_description_tag title, href
-      tag :link, href: href, title: title, type: "application/opensearchdescription+xml", rel: "search"
+    def opensearch_description_tag(title, href)
+      tag :link, href:, title:, type: "application/opensearchdescription+xml", rel: "search"
     end
 
     ##
@@ -104,7 +104,8 @@ module Blacklight
     # @see render_body_class
     # @return [Array<String>]
     def extra_body_classes
-      @extra_body_classes ||= ["blacklight-#{controller.controller_name}", "blacklight-#{[controller.controller_name, controller.action_name].join("-")}"]
+      @extra_body_classes ||= ["blacklight-#{controller.controller_name}",
+        "blacklight-#{[controller.controller_name, controller.action_name].join("-")}"]
     end
   end
 end
