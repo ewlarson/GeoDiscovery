@@ -50,6 +50,9 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# vite rails
+gem "vite_rails", "~> 3.0"
+
 group :production do
   gem "mysql2"
   gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
@@ -91,7 +94,7 @@ gem "blacklight", "~> 7.35"
 # See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
 gem "blacklight_advanced_search", git: "https://github.com/ewlarson/blacklight_advanced_search.git",
   branch: "bl7-fix-gentle-hands"
-gem "geoblacklight", "4.1"
+gem "geoblacklight", "~> 4.4"
 gem "geoblacklight_sidecar_images", "~> 1.0"
 gem "mini_magick", "~> 4.0"
 gem "sprockets", "< 4.0"
