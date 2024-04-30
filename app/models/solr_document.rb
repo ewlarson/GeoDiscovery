@@ -5,6 +5,7 @@ class SolrDocument
   include Blacklight::Solr::Document
   include Geoblacklight::SolrDocument
   include WmsRewriteConcern
+  include WmsRewriteConcern
 
   # self.unique_key = 'id'
   self.unique_key = Settings.FIELDS.UNIQUE_KEY
