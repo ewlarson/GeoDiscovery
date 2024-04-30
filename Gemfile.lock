@@ -97,9 +97,9 @@ GEM
       ostruct (>= 0.3.2)
       rails (>= 5.1, < 7.2)
       view_component (>= 2.66, < 4)
-    blacklight_allmaps (0.1.1)
+    blacklight_allmaps (0.3.0)
       blacklight (>= 7.25.2, < 9)
-      httparty
+      httparty (~> 0.20)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
     bootstrap (4.6.2)
@@ -139,6 +139,7 @@ GEM
       deep_merge (~> 1.2, >= 1.2.1)
     connection_pool (2.4.1)
     crass (1.0.6)
+    csv (3.3.0)
     date (3.3.4)
     debug (1.9.2)
       irb (~> 1.10)
@@ -234,7 +235,8 @@ GEM
     http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
-    httparty (0.21.0)
+    httparty (0.22.0)
+      csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (1.14.4)
@@ -390,11 +392,7 @@ GEM
     redis-client (0.22.1)
       connection_pool
     regexp_parser (2.9.0)
-<<<<<<< HEAD
-    reline (0.5.2)
-=======
     reline (0.5.4)
->>>>>>> main
       io-console (~> 0.5)
     responders (3.1.1)
       actionpack (>= 5.2)
@@ -509,11 +507,7 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
     uri (0.13.0)
-<<<<<<< HEAD
-    view_component (3.12.0)
-=======
     view_component (3.12.1)
->>>>>>> main
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -554,7 +548,7 @@ DEPENDENCIES
   bcrypt_pbkdf (~> 1.0, < 2.0)
   blacklight (~> 7.35)
   blacklight_advanced_search!
-  blacklight_allmaps (~> 0.1.1)
+  blacklight_allmaps
   bootsnap
   bootstrap (~> 4.0)
   capistrano (~> 3.17.1)
