@@ -7,4 +7,3 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 require "blacklight/allmaps/rake_task"
-require 'blacklight/allmaps/rake_task'
