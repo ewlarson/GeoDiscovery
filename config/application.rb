@@ -13,7 +13,6 @@ Bundler.require(*Rails.groups)
 module GeoDiscovery
   class Application < Rails::Application
     config.railties_order = [Blacklight::Allmaps::Engine, :main_app, :all]
-    config.railties_order = [Blacklight::Allmaps::Engine, :main_app, :all]
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
