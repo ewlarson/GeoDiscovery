@@ -19,3 +19,7 @@ Rails.application.config.assets.paths << Rails.root.join("vendor", "assets", "im
 
 # Blacklight Allmaps
 Rails.application.config.assets.precompile += %w[blacklight/allmaps/allmaps-logo.svg]
+
+          # Blacklight Allmaps
+          Rails.application.config.assets.paths << Rails.root.join('vendor', 'assets', 'images')
+          Rails.application.config.assets.precompile += %w( blacklight/allmaps/allmaps-logo.svg )
