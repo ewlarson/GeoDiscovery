@@ -33,7 +33,7 @@ gem "jbuilder"
 gem "redis", "~> 5.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -49,6 +49,9 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# vite rails
+gem "vite_rails", "~> 3.0"
 
 group :production do
   gem "mysql2"
@@ -91,7 +94,7 @@ gem "blacklight", "~> 7.35"
 # See: https://github.com/projectblacklight/blacklight_advanced_search/issues/127
 gem "blacklight_advanced_search", git: "https://github.com/ewlarson/blacklight_advanced_search.git",
   branch: "bl7-fix-gentle-hands"
-gem "geoblacklight", "~> 4.1"
+gem "geoblacklight", "~> 4.4"
 gem "geoblacklight_sidecar_images", "~> 1.0"
 gem "mini_magick", "~> 4.0"
 gem "sprockets", "< 4.0"
